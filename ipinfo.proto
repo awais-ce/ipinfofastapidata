@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ipinfo;
+
+service IPInfoService {
+    rpc SayIpInfo (IpRequest) returns (IpReply);
+}
+
+message IpRequest {
+    string ip = 1;
+}
+
+message IpReply {
+    string ip = 1;
+    string city = 2;
+    string region = 3;
+    string country = 4;
+    string location = 5;
+    string org = 6;
+    string postal = 7;
+    string timezone = 8;
+}
+
+
